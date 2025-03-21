@@ -12,10 +12,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-Fashion</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Welcome to JS-Fashion</h1>
     </header>
@@ -43,6 +81,11 @@
         </section>
     </main>
 
-    <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <script>
+        document.getElementById("visitProductsBtn").addEventListener("click", function() {
+            document.getElementById("productSection").classList.toggle("hidden");
+        });
+    </script>
+
 </body>
 </html>
